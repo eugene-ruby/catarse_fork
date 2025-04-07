@@ -1,0 +1,5 @@
+- followers_count = @notification.metadata['user_follow_ids'].to_a.size
+-if followers_count == 1
+  |Você tem um novo seguidor no Catarse
+-else
+  |Você tem #{followers_count} novos seguidores no Catarse

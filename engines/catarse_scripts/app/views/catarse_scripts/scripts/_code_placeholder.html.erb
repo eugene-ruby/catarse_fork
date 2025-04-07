@@ -1,0 +1,22 @@
+# Don't change the class name.
+class <ScriptClassName>
+  def call(worker = nil)
+    # YOUR CODE HERE. eg.
+    # payment = Payment.find_by(gateway_id: 123)
+    # payment.update(state: 'refunded')
+
+    ## TRACKING PROGRESS ##
+    # worker.total = 1255 # define records size
+    # worker.at(233, "message") # increment counter
+
+    ## HANDLING ERRORS ##
+    # The script worker will handle all errors
+    # and send them to Sentry.
+    # If you want handle errors manually, do:
+    # begin
+    #   ...
+    # rescue => e
+    #   Sentry.capture_exception(e, extra: { key: 'value' })
+    # end
+  end
+end

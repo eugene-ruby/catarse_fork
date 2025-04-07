@@ -1,0 +1,22 @@
+- content_for :js do
+  = javascript_include_tag 'redactor'
+javascript:
+  const userName = "#{resource.decorator.display_name}";
+
+  function updatePageTitle() {
+    const pageTitleKey = window.location.href.split("#")[1] || 'contributions'
+    const path = `users.edit.menu.${pageTitleKey}`;
+    document.title = `${I18n.t(path)} - ${userName}`;
+  };
+
+  window.addEventListener('hashchange', updatePageTitle);
+  document.addEventListener('DOMContentLoaded', updatePageTitle);
+
+- content_for :stylesheets do
+  = stylesheet_link_tag 'redactor'
+
+#application data-userid=resource.id
+
+- content_for :application_js do
+  = javascript_include_tag 'api/application'
+  = javascript_include_tag 'api/catarse'

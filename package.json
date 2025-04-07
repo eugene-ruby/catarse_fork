@@ -1,0 +1,12 @@
+{
+    "engines": {
+        "node": "14",
+        "yarn": "~1.22"
+    },
+    "dependencies": {
+        "catarse.js": "file:./catarse.js"
+    },
+    "scripts": {
+        "preinstall": "sh yarn_preinstall.sh"
+    }
+}
